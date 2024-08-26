@@ -14,13 +14,14 @@ document.addEventListener('keydown', changeDirection);
 
 function setup() {
     snake = []; // Like a stack or queue data structure is what I'm doing, I mean it is a snake that gets bigger :-)
-    for (let i = 0; i < 5; i++) {
-        snake.push({ x: i, y: 0 });
+    for (let i = 3; i < 5; i++) {
+        snake.push({ x: i, y: 5 });
     }
     fruit = { x: Math.floor(Math.random() * columns), y: Math.floor(Math.random() * rows) };
     d = { x: 1, y: 0 };
     isGameOver = false;
-    gameLoop();
+
+	setTimeout(gameLoop, 3000);
 }
 
 
