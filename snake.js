@@ -9,8 +9,8 @@ let snake;
 let fruit;
 let d;
 let isGameOver;
-// I'll do this in a bit
-//document.addEventListener('keydown', changeDirection);
+
+document.addEventListener('keydown', changeDirection);
 
 function setup() {
     snake = []; // Like a stack or queue data structure is what I'm doing, I mean it is a snake that gets bigger :-)
