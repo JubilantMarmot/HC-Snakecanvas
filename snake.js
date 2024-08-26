@@ -71,7 +71,18 @@ function checkCollision() {
         }
     }
 }
+function gameLoop() {
+    if (isGameOver) return;
 
+    setTimeout(() => {
+        clearCanvas();
+        moveSnake();
+        drawSnake();
+        drawFruit();
+        checkCollision();
+        gameLoop();
+    }, 100);
+}
 function gameOver() {
     isGameOver = true;
     ctx.fillStyle = 'white';
