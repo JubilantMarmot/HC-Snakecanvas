@@ -23,6 +23,13 @@ function setup() {
     gameLoop();
 }
 
+
+
+function clearCanvas() {
+    ctx.fillStyle = 'black';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+}
+
 function drawSnake() {
     ctx.fillStyle = 'green';
     snake.forEach(part => {
